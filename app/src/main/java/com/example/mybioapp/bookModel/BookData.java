@@ -26,4 +26,11 @@ class BookData implements IBook{
 
         return arrayListMatches;
     }
+
+    public String[] getCategory(){
+
+        String[] arrCat = new String[]{"java" , "c#" , "python" , "React"};
+        return arrCat ;
+
+    }
 }

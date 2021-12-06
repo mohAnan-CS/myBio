@@ -12,27 +12,27 @@
     android:theme="@android:style/Theme.Light"
     tools:context=".MainActivity">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Spinner for books"/>
+
+    <Spinner
+        android:id="@+id/spBookCat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        tools:ignore="SpeakableTextPresentCheck" />
+
     <Button
-        android:text="Get Books"
         android:id="@+id/btnGetBook"
         style="@style/buttonStyle"
         android:background="@drawable/custom_btn"
         android:onClick="btnGetBookOnClick"
-        />
+        android:text="Get Books"
+        android:textColor="#9575CD" />
 
-    <Button
-        android:text="Get University"
-        android:id="@+id/btnGetUniversity"
-        style="@style/buttonStyle"
-        android:background="@drawable/custom_btn"
-        />
 
-    <Button
-        android:text="Get Laptops"
-        android:id="@+id/btnGetLaptop"
-        style="@style/buttonStyle"
-        android:background="@drawable/custom_btn"
-        />
 
 
 

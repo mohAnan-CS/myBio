@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 
@@ -15,10 +17,25 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
+    private Spinner spBookCat;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        spBookCat = findViewById(R.id.spBookCat);
+        fillSpinner();
+
+    }
+
+    private void fillSpinner() {
+
+        BookFactor factor = new BookFactor();
+        IBook objBook = factor.getModel();
+
+        String[] arrCat = objBook.getCategory();
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item , arrCat);
+        spBookCat.setAdapter(adapter);
 
     }
 
@@ -27,13 +44,14 @@ public class MainActivity extends AppCompatActivity {
         BookFactor factor = new BookFactor();
         IBook objBook = factor.getModel();
 
-        ArrayList<Book> arrayListBook = (ArrayList<Book>) objBook.getBook("java");
-        String strBooks = "";
+        String bookCat = spBookCat.getSelectedItem().toString().trim();
+        ArrayList<Book> arrayListBook = (ArrayList<Book>) objBook.getBook(bookCat);
+        StringBuilder strBooks = new StringBuilder();
         for (Book b : arrayListBook){
-            strBooks+=b.getTitle() + "\n";
+            strBooks.append(b.getTitle()).append("\n");
         }
 
-        Toast.makeText(this,strBooks , Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, strBooks.toString(), Toast.LENGTH_SHORT).show();
 
     }
 }
