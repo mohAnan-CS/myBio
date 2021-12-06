@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_ground"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="40dp"
+    android:theme="@android:style/Theme.Light"
+    tools:context=".MainActivity">
+
+    <Button
+        android:text="Get Books"
+        android:id="@+id/btnGetBook"
+        style="@style/buttonStyle"
+        android:background="@drawable/custom_btn"
+        android:onClick="btnGetBookOnClick"
+        />
+
+    <Button
+        android:text="Get University"
+        android:id="@+id/btnGetUniversity"
+        style="@style/buttonStyle"
+        android:background="@drawable/custom_btn"
+        />
+
+    <Button
+        android:text="Get Laptops"
+        android:id="@+id/btnGetLaptop"
+        style="@style/buttonStyle"
+        android:background="@drawable/custom_btn"
+        />
+
+
+
+</LinearLayout>
+
+
+
+

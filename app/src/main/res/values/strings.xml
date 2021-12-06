@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">My bioApp</string>
+    <string name="enter_full_user_name">Enter full user name</string>
+    <string name="enter_user_name">Enter user name</string>
+</resources>
